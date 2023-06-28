@@ -1,0 +1,174 @@
+{{ define "error"}}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SME API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background: #f7f7f7;
+    }
+
+    .body {
+      height: 100%;
+      position: relative;
+      width: 100%;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .triangle {
+      display: none;
+      border-left: solid transparent;
+      border-right: solid transparent;
+      width: 0;
+      height: 0;
+      position: fixed;
+      z-index: -2;
+      bottom: 0;
+    }
+
+    @media (min-width: 600px) {
+      .triangle {
+        display: block;
+        border-left-width: 100vw;
+        border-right-width: 100vw;
+        border-bottom: 100vh solid white;
+        left: -50vw;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .triangle {
+        border-left-width: 75vw;
+        border-right-width: 75vw;
+        left: -25vw;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .triangle {
+        border-left-width: 50vw;
+        border-right-width: 50vw;
+        left: 0;
+      }
+    }
+
+    .triangle.inverted {
+      border-bottom: none;
+      top: 0;
+      border-top: 100vh solid rgba(240, 239, 239, 0.5);
+      z-index: -1;
+    }
+
+    .error {
+      background-color: #f2dede;
+      border: 1px solid #ebccd1;
+      padding: 15px;
+      /* width: 100%; */
+      align-self: flex-start;
+    }
+
+    .error>p {
+      color: #a94442;
+    }
+
+    .footer {
+      background: #272A39;
+      width: 100%;
+      padding: 25px 0;
+      font-size: 10px;
+      left: 0;
+      bottom: 0;
+      color: #FFFFFF;
+      position: absolute;
+    }
+
+    .footer .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer .copyright {
+      margin: 0;
+      flex: 1;
+    }
+
+    .footer .links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .footer .links a {
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-left: 30px;
+    }
+
+    .footer .links a:hover {
+      color: #897DFA;
+    }
+
+    @media screen and (max-width: 767px) {
+      .footer .container {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+      .footer .copyright {
+        order: 2;
+      }
+      .footer .links {
+        order: 1;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      .footer .links a {
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="body">
+    <div class="container">
+      <div class="error">
+        <p>{{ . }}</p>
+      </div>
+    </div>
+    <div id="footer" class="footer">
+      <div class="container">
+        <p class="copyright">
+          COPYRIGHT © 2021 SME API. ALL RIGHTS RESERVED.
+        </p>
+        <div class="links">
+          <a href="" target="_blank">Privacy Notice</a>
+          <a href="" target="_blank">Terms Of Use</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="triangle"></div>
+  <div class="triangle inverted"></div>
+</body>
+
+</html>
+{{ end }}

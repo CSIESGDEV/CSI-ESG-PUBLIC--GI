@@ -1,0 +1,35 @@
+p, admin, /*, *
+p, public, /*, OPTIONS
+p, public, /api/v1/health, GET
+p, public, /api/v1/contactUs, POST
+p, public, /api/v1/signedURL, POST
+p, public, /api/v1/vendor/login, POST
+p, public, /api/v1/admin/login, POST
+p, public, /api/v1/smeRegister, POST
+p, public, /api/v1/smeUser/login, POST
+p, public, /api/v1/smeUser/register, POST
+p, public, /api/v1/corporateRegister, POST
+p, public, /api/v1/corporateUser/login, POST
+p, public, /api/v1/corporateUser/register, POST
+p, public, /api/v1/smeSubscription, POST
+p, public, /api/v1/question, *
+p, smeUser, /*, OPTIONS
+p, smeUser, /api/v1/smeUser, *
+p, smeUser, /api/v1/smeUsers, GET
+p, smeUser, /api/v1/sme, *
+p, smeUser, /api/v1/smes, GET
+p, smeUser, /api/v1/corporates, GET
+p, smeUser, /api/v1/corporateUsers, GET
+p, smeUser, /api/v1/learningResources, GET
+p, smeUser, /api/v1/assessment, *
+p, smeUser, /api/v1/assessments, GET
+p, smeUser, /api/v1/assessmentEntries, GET
+p, smeUser, /api/v1/connection, *
+p, smeUser, /api/v1/connections, GET
+p, smeUser, /api/v1/subscriptions, GET
+p, smeUser, /api/v1/questionSets, GET
+p, smeUser, /api/v1/questions, GET
+p, smeUser, /api/v1/assessmentEntry/*, PUT
+g, superAdmin, admin
+g, smeUser, public
+g, smeAdmin, smeUser

@@ -31,7 +31,6 @@ logs-journal
 settings.json
 .jsbeautifyrc
 /archive/cronjob
-.realize.yaml
 
 #Go Vendor (Package management)
 vendor

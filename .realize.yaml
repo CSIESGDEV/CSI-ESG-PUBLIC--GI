@@ -1,0 +1,58 @@
+settings:
+  files:
+    outputs:
+      status: false
+      path: ""
+      name: .r.outputs.log
+    logs:
+      status: false
+      path: ""
+      name: .r.logs.log
+    errors:
+      status: false
+      path: ""
+      name: .r.errors.log
+  legacy:
+    force: true
+    interval: 0ms
+schema:
+  - name: sme-api
+    path: .
+    env:
+      ENV: "development"
+      SYSTEM_HOST_PATH: "https://csi-esg-api.azurewebsites.net"
+      ADMIN_PORTAL_PATH: "https://csi-esg-api.azurewebsites.net:4001/dashboard"
+      USER_PORTAL_PATH: ""
+      STORAGE_PATH: "/storage"
+      MONGO_TEST_DB_NAME: "smesandbox"
+      MONGO_DB_NAME: "smeproduction"
+      MONGO_DB_USER: "smeadmin"
+      MONGO_DB_PASS: "12345678"
+      MONGO_DB_HOST: "sme-doc-db.cqylm5plarwx.ap-southeast-1.docdb.amazonaws.com:27017"
+      JWT_SECRET: "ksdhfucovsdhgois"
+      JWT_ISSUER: "sme-api.com"
+      AWS_SES_SENDER: "zweileow@gmail.com"
+      AWS_REGION: "ap-southeast-1"
+      AWS_ACCESS_KEY_ID: "AKIAV33G6ZYOIS2ZLN5L"
+      AWS_SECRET_ACCESS_KEY: "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"
+      AWS_S3_BUCKET: "smecorp-bucket"
+      AWS_PROFILE: "gksh"
+    commands:
+      install:
+        status: true
+        method: go install
+      run:
+        status: true
+    watcher:
+      extensions:
+        - go
+      paths:
+        - /
+      scripts:
+      - type: before
+        command: taskkill /IM sme-api.exe /F
+        output: true
+      ignored_paths:
+        - .git
+        - .realize
+        - vendor

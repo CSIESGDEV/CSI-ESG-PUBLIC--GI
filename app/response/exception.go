@@ -3,8 +3,8 @@ package response
 import (
 	"fmt"
 
-	"sme-api/app/env"
-	"sme-api/app/response/errcode"
+	"csi-api/app/env"
+	"csi-api/app/response/errcode"
 
 	"github.com/valyala/bytebufferpool"
 )

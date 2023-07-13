@@ -1,5 +1,5 @@
 export GO111MODULE=on
-BINARY_NAME=sme-api
+BINARY_NAME=csi-api
 
 all: test build
 test:

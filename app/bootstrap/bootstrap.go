@@ -2,8 +2,8 @@ package bootstrap
 
 import (
 	"context"
-	"sme-api/app/kit/validator"
-	"sme-api/app/repository"
+	"csi-api/app/kit/validator"
+	"csi-api/app/repository"
 
 	storage "github.com/myussufz/cloud-storage"
 	"go.mongodb.org/mongo-driver/mongo"

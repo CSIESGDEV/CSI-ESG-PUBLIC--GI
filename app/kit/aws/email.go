@@ -1,11 +1,11 @@
 package aws
 
 import (
+	"csi-api/app/env"
+	"csi-api/app/response"
+	"csi-api/app/response/errcode"
 	"fmt"
 	"net/http"
-	"sme-api/app/env"
-	"sme-api/app/response"
-	"sme-api/app/response/errcode"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/awserr"

@@ -22,7 +22,7 @@ const (
 	// Timeout operations after N seconds
 	connectTimeout  = 5
 	queryTimeout    = 30
-	clusterEndpoint = "sme-doc-db.cqylm5plarwx.ap-southeast-1.docdb.amazonaws.com:27017"
+	// clusterEndpoint = "sme-doc-db.cqylm5plarwx.ap-southeast-1.docdb.amazonaws.com:27017"
 
 	// Which instances to read from
 	readPreference = "secondaryPreferred"
@@ -34,10 +34,15 @@ func (bs *Bootstrap) initMongoDB() *Bootstrap {
 	ctx := context.Background()
 
 	// connect db
-	connStr := fmt.Sprintf(
-		"mongodb://%s",
-		"localhost:27017",
-	)
+	// connStr := fmt.Sprintf(
+	// 	"mongodb://%s:%s@%s/%s",
+	// 	"csiesg",
+	// 	"qYPa0yyfGRJGhA5vpzKqNBCKsqoUmK5PubQ0VBPZXrviw1nV9Hx8eBKsxAwwOO6eNXLJwB78UDEkACDbG9xfMQ==",
+	// 	"csiesg.mongo.cosmos.azure.com:10255",
+	// 	"CSI-DB-PROD",
+	// )
+
+	connStr := "mongodb://csiesg:qYPa0yyfGRJGhA5vpzKqNBCKsqoUmK5PubQ0VBPZXrviw1nV9Hx8eBKsxAwwOO6eNXLJwB78UDEkACDbG9xfMQ==@csiesg.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@csiesg@"
 
 	fmt.Println("connStr: ", connStr)
 
@@ -101,3 +106,4 @@ func getCustomTLSConfig(caFile string) (*tls.Config, error) {
 
 	return tlsConfig, nil
 }
+

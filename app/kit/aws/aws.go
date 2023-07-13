@@ -1,9 +1,9 @@
 package aws
 
 import (
+	"csi-api/app/env"
 	"mime/multipart"
 	"os"
-	"sme-api/app/env"
 	"strings"
 	"time"
 

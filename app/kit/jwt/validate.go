@@ -1,9 +1,9 @@
 package jwt
 
 import (
+	"csi-api/app/env"
 	"encoding/json"
 	"errors"
-	"sme-api/app/env"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"

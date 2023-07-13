@@ -1,14 +1,14 @@
 package aws
 
 import (
+	"csi-api/app/env"
+	"csi-api/app/kit/general"
+	"csi-api/app/response"
+	"csi-api/app/response/errcode"
 	"fmt"
 	"mime/multipart"
 	"net/http"
 	"os"
-	"sme-api/app/env"
-	"sme-api/app/kit/general"
-	"sme-api/app/response"
-	"sme-api/app/response/errcode"
 )
 
 // PushDocBucket :

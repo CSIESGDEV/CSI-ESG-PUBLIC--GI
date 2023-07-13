@@ -1,11 +1,11 @@
 package handler
 
 import (
+	"csi-api/app/env"
+	kit "csi-api/app/kit/aws"
+	"csi-api/app/response"
+	"csi-api/app/response/errcode"
 	"net/http"
-	"sme-api/app/env"
-	kit "sme-api/app/kit/aws"
-	"sme-api/app/response"
-	"sme-api/app/response/errcode"
 	"strings"
 
 	"github.com/labstack/echo/v4"

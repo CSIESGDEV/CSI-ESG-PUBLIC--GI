@@ -32,6 +32,7 @@ settings.json
 .jsbeautifyrc
 /archive/cronjob
 .realize.yaml
+Dockerfile
 
 #Go Vendor (Package management)
 vendor

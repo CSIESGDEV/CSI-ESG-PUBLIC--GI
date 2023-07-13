@@ -1,8 +1,8 @@
 package constant
 
 import (
-	"sme-api/app/entity"
-	"sme-api/app/env"
+	"csi-api/app/entity"
+	"csi-api/app/env"
 )
 
 // Constants

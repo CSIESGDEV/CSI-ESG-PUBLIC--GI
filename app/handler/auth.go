@@ -1,12 +1,12 @@
 package handler
 
 import (
+	"csi-api/app/entity"
+	"csi-api/app/env"
+	"csi-api/app/kit/jwt"
+	"csi-api/app/response"
+	"csi-api/app/response/errcode"
 	"net/http"
-	"sme-api/app/entity"
-	"sme-api/app/env"
-	"sme-api/app/kit/jwt"
-	"sme-api/app/response"
-	"sme-api/app/response/errcode"
 	"strings"
 
 	"github.com/labstack/echo/v4"

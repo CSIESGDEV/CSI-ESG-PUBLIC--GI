@@ -2,8 +2,9 @@ package repository
 
 import (
 	"context"
+	"csi-api/app/entity"
 	"fmt"
-	"sme-api/app/entity"
+	"os"
 	"strconv"
 	"time"
 
@@ -41,7 +42,7 @@ func (r Repository) FindSMEUserByID(ctx context.Context, id string) (*entity.SME
 
 // FindSMEUserByEmail :
 func (r Repository) FindSMEUserByEmail(ctx context.Context, email string) (*entity.SMEUser, error) {
-	fmt.Println(email)
+	fmt.Println("editor:", os.Getenv("MONGO_DB_HOST"))
 	user := new(entity.SMEUser)
 	if err := r.db.Collection(entity.CollectionSMEUser).FindOne(ctx, bson.M{
 		"email": email,

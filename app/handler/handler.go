@@ -5,12 +5,12 @@ import (
 	"net/http"
 	"strings"
 
-	"sme-api/app/kit/aws"
-	"sme-api/app/repository"
-	"sme-api/app/response"
-	"sme-api/app/response/errcode"
+	"csi-api/app/kit/aws"
+	"csi-api/app/repository"
+	"csi-api/app/response"
+	"csi-api/app/response/errcode"
 
-	"sme-api/app/bootstrap"
+	"csi-api/app/bootstrap"
 
 	"github.com/labstack/echo/v4"
 )
@@ -32,7 +32,7 @@ func (h Handler) APIHealthCheckVersion1(c echo.Context) error {
 	if err := h.repository.HealthCheck(context.Background()); err != nil {
 		return err
 	}
-	return c.Render(http.StatusOK, "info", "SME API IS FINE")
+	return c.Render(http.StatusOK, "info", "SME API IS FINE test")
 }
 
 // Create signed url for S3 bucket :

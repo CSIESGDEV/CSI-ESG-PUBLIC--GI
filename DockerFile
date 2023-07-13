@@ -1,5 +1,26 @@
 FROM golang:1.18.3-alpine3.16
 
+ENV CGO_ENABLED=0
+ENV ENV = "development"
+ENV SYSTEM_HOST_PATH = "https://csiesg-api.azurewebsites.net/"
+ENV ADMIN_PORTAL_PATH = "https://csiesg-api.azurewebsites.net/dashboard"
+ENV USER_PORTAL_PATH = ""
+ENV STORAGE_PATH = "/storage"
+ENV MONGO_TEST_DB_NAME = "smesandbox"
+ENV MONGO_DB_NAME = "CSI-DB-PROD"
+ENV MONGO_DB_USER = "csiesg"
+ENV MONGO_DB_PASS = "qYPa0yyfGRJGhA5vpzKqNBCKsqoUmK5PubQ0VBPZXrviw1nV9Hx8eBKsxAwwOO6eNXLJwB78UDEkACDbG9xfMQ=="
+ENV MONGO_DB_HOST = "csiesg.mongo.cosmos.azure.com:10255"
+ENV JWT_SECRET = "ksdhfucovsdhgois"
+ENV JWT_ISSUER = "sme-api.com"
+ENV AWS_SES_SENDER = "zweileow@gmail.com"
+ENV AWS_SES_SENDER_2 = "zweileow@gmail.com"
+ENV AWS_REGION = "ap-southeast-1"
+ENV AWS_ACCESS_KEY_ID = "AKIAV33G6ZYOIS2ZLN5L"
+ENV AWS_SECRET_ACCESS_KEY = "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"
+ENV AWS_S3_BUCKET = "smecorp-bucket"
+ENV AWS_PROFILE = "gksh"
+
 RUN mkdir /app
 
 ADD . /app

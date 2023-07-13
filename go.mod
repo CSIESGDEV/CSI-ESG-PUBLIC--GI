@@ -1,4 +1,4 @@
-module sme-api
+module csi-api
 
 go 1.17
 

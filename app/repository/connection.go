@@ -2,7 +2,7 @@ package repository
 
 import (
 	"context"
-	"sme-api/app/entity"
+	"csi-api/app/entity"
 	"strconv"
 
 	"go.mongodb.org/mongo-driver/bson"

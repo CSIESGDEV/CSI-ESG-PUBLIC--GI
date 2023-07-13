@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"sme-api/app/entity"
+	"csi-api/app/entity"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -20,7 +20,7 @@ type Repository struct {
 // New :
 func New(ctx context.Context, mongo *mongo.Client) *Repository {
 	return &Repository{
-		db: mongo.Database("csi-local"),
+		db: mongo.Database("CSI-DB-PROD"),
 	}
 }
 

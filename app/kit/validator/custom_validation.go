@@ -1,11 +1,11 @@
 package validator
 
 import (
+	"csi-api/app/constant"
+	"csi-api/app/entity"
+	"csi-api/app/kit/random"
 	"fmt"
 	"reflect"
-	"sme-api/app/constant"
-	"sme-api/app/entity"
-	"sme-api/app/kit/random"
 	"strconv"
 	"strings"
 

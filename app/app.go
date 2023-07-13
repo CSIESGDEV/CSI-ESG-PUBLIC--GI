@@ -1,17 +1,17 @@
 package app
 
 import (
+	"csi-api/app/constant"
+	"csi-api/app/handler"
+	"csi-api/app/router"
 	"fmt"
 	"io"
 	"math/rand"
 	"net/http"
-	"sme-api/app/constant"
-	"sme-api/app/handler"
-	"sme-api/app/router"
 	"text/template"
 	"time"
 
-	bs "sme-api/app/bootstrap"
+	bs "csi-api/app/bootstrap"
 
 	"github.com/casbin/casbin/v2"
 	"github.com/labstack/echo/v4"

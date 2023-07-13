@@ -43,7 +43,8 @@ var Config = struct {
 
 func init() {
 	if err := env.ParseWithFuncs(&Config,
-		map[reflect.Type]env.ParserFunc{}); err != nil {
+		map[reflect.Type]env.ParserFunc{});
+		err != nil {
 		panic(err)
 	}
 }

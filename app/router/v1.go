@@ -1,7 +1,7 @@
 package router
 
 import (
-	"sme-api/app/handler"
+	"csi-api/app/handler"
 
 	"github.com/labstack/echo/v4"
 )
